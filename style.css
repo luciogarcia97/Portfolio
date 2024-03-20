@@ -8,6 +8,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    scroll-behavior: smooth;
 }
 :root{
     --color-black1: #151515;
@@ -21,7 +22,6 @@
 }
 body{
     font-family: "Poppins", sans-serif;
-    scroll-behavior: smooth;
     color: var(--color-black2);
 }
 h1,h2,h3,h4,h5{
@@ -85,6 +85,7 @@ nav{
     left: 0;
     position: fixed;
     z-index: 10;
+    background-color: var(--color-white);
 }
 .nav-container{
     display: flex;
@@ -92,7 +93,7 @@ nav{
     justify-content: space-between;
 }
 .logo img{
-    max-width: 100px;
+    max-width: 52px;
 }
 .navlinks{
     display: flex;
@@ -121,10 +122,79 @@ header{
     grid-template-columns: 52% auto;
     gap: 80px;
     align-items: center;
-    padding-top: 5rem;
 }
 .header-container p{
     margin-bottom: 30px;
     font-size: 20px;
 }
 /* End header */
+
+/* Start About Section */
+#SobreMi{
+    padding-top: 0 !important;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+}
+.about-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 140px;
+    align-items: center;
+}
+.about-right p{
+    margin-bottom: 1rem;
+}
+.about-right h2{
+    margin-bottom: 10px;
+}
+/* End About Section */
+
+/* Start Services Section */
+.myservices{
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+.myservices article{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 0 10px var(--shadow-color);
+    padding: 40px 20px;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+.myservices article:hover{
+    box-shadow: none;
+}
+.myservices article img{
+    max-width: 110px;
+    margin: auto;
+}
+/* End Services Section */
+
+/* Start Skills Section */
+.myskills{
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+.myskills article{
+    box-shadow: 0 0 10px var(--shadow-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    transition: var(--transition);
+}
+.myskills article:hover{
+    box-shadow: none;
+}
+.myskills article img{
+    max-width: 100px;
+}
+/* End Skills Section */
