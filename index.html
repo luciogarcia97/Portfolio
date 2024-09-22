@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="./style.css">
     <!-- Fontawesome links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- SweetAlert link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <!-- Start Nav Bar -->
@@ -153,7 +157,44 @@
     <section id="Contacto">
         <div class="container contact-container">
             <h2>Enviame un correo!</h2>
-            <a href="mailto: garcialucio97@gmail.com" class="btn">garcialucio97@gmail.com</a>
+            <form id="contactForm">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="surname">Apellido:</label>
+                <input type="text" id="surname" name="surname" required>
+    
+                <label for="email">Correo:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required></textarea>
+    
+                <button type="submit">Enviar</button>
+            </form>
+            <script>
+                document.getElementById('contactForm').addEventListener('submit', function(event) {
+                    event.preventDefault();
+
+                    const name = document.getElementById('name').value;
+                    const surname = document.getElementById('surname').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
+            
+                    console.log('Nombre:', name);
+                    console.log('Apellido:', surname);
+                    console.log('Correo:', email);
+                    console.log('Mensaje:', message);
+            
+                    Swal.fire({
+                        title: '¡Formulario enviado!',
+                        text: 'Gracias por contactarnos. Nos pondremos en contacto contigo pronto.',
+                        icon: 'success',
+                        confirmButtonText: 'Cerrar'
+                    });
+                });
+            </script>
+            
             <div class="social">
                 <a href="https://www.facebook.com/lucio.garcia.3382"><i class="fab fa-facebook"></i></a>
                 <a href="https://www.instagram.com/lucioggarcia/"><i class="fab fa-instagram"></i></a>
