@@ -205,7 +205,7 @@ header{
 .myworks{
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 27px;
 }
 .myworks img{
     width: 590px;
@@ -231,7 +231,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    gap: 50px;
 }
 .contact-container .social{
     display: flex;
